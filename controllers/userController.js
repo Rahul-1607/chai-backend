@@ -10,7 +10,7 @@ const userRegister = async (req, res) => {
     const errors = validationResult(req)
 
     if(!errors.isEmpty()) {
-      console.log('All fields are required')
+      console.log('All fields are  must required')
       return res.status(400).json({
       success: false,
       msg:errors,
