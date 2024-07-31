@@ -1,11 +1,13 @@
 const {check} = require('express-validator')
 
+// validation on userRegister route api 
+
 exports.registerValidator = [
     check('name','Name is required').not().isEmpty(),
     check('email','Please include a valid email').isEmail().normalizeEmail({
         gmail_remove_dots:true
     }),
-    check('mobile','Mobile no. should be contain 10 didgits').isLength({
+    check('mobile','Mobile no. should be contain 10 digits').isLength({
         max:10,
         min:10
     }),

@@ -4,7 +4,7 @@ const userController = require('../controllers/userController')
 const {registerValidator} = require('../helpers/validation')
 router.use(express.json())
 
-const  path = require('path')
+const path = require('path')
 const multer = require('multer'); 
 
 const storage = multer.diskStorage({
